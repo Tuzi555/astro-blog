@@ -1,6 +1,21 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Tags from '../components/Tags.astro';
+
+interface Props {
+  frontmatter: {
+    author: string;
+    image: {
+      url: string;
+      alt: string;
+    };
+    tags: string[];
+    title: string;
+    pubDate: string;
+    description: string;
+  };
+}
+
 const { frontmatter } = Astro.props;
 ---
 
